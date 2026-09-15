@@ -3,6 +3,17 @@ import os
 import pandas as pd
 import streamlit as st
 
+# --- 【追加】Streamlitのデフォルトフッターやハンバーガーメニューを隠すCSS ---
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+# --- ここから下のコードはそのまま ---
 st.title("SPARK山中湖_出発時間アンケート（9/23）")
 st.write("出発時間の希望を教えてください。")
 
